@@ -1,15 +1,21 @@
 
-<label>Payment Type</label>
-<select name="payment_id" id="paymentDropdown" >
-	<?php foreach ($payments as $payment):?>
-		<option value="<?= $payment['id']?>"><?= $payment['payment']?></option>
-	<?php endforeach;?></select>
+<div class="row">
+	<div class="col-2">
+		<label>Payment Type</label>
+		<select name="payment_id" id="paymentDropdown" class="form-select">
+			<?php foreach ($payments as $payment):?>
+				<option value="<?= $payment['id']?>"><?= $payment['payment']?></option>
+			<?php endforeach;?></select>
+	</div>
+	<div class="col-2">
+		<label>Currency</label>
+		<select name="currency_id" id="currencyDropdown" class="form-select">
+			<?php foreach ($currencies as $currency):?>
+				<option value="<?= $currency['id']?>"><?= $currency['name']?></option>
+			<?php endforeach;?></select>
+	</div>
+</div>
 
-<label>Currency</label>
-<select name="currency_id" id="currencyDropdown" >
-	<?php foreach ($currencies as $currency):?>
-		<option value="<?= $currency['id']?>"><?= $currency['name']?></option>
-	<?php endforeach;?></select>
 
 <table class="table text-center">
 	<thead>
